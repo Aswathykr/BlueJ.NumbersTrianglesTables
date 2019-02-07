@@ -4,19 +4,13 @@
 public class NumberUtilities {
 
     public static String getRange(int stop) {
-        String answer = "";
-        for(int i = 0; i < stop; i++){
-            answer = answer + i;
-        }
-        return answer;
+        
+        return getRange(0,stop);
     }
 
     public static String getRange(int start, int stop) {
-        String answer = "";
-        for(int i = start; i < stop; i++){
-            answer = answer + i;
-        }
-        return answer;
+        
+        return getRange(start,stop, 1);
     }
 
 
@@ -29,22 +23,18 @@ public class NumberUtilities {
     }
 
     public static String getEvenNumbers(int start, int stop) {
-        String answer = "";
+        
         if(start % 2 != 0) start++;
-        for(int i = start; i < stop; i+= 2){
-            answer = answer + i;
-        }
-        return answer;
+        
+        return getRange(start,stop, 2);
     }
 
 
     public static String getOddNumbers(int start, int stop) {
-        String answer = "";
+        
         if(start % 2 == 0) start++;
-        for(int i = start; i < stop; i+= 2){
-            answer = answer + i;
-        }
-        return answer;
+        
+        return getRange(start,stop, 2);
     }
 
 
